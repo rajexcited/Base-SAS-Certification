@@ -6,7 +6,7 @@ body {height: 100%; margin: 0px;}
 .bodyContainer {
 	width: 100%;
 	height: 100%;
-	font:18px arial, helvetica;
+	font:16px arial, helvetica;
 	padding: 8px;
 	
 	-webkit-touch-callout: none;

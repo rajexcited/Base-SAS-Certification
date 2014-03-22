@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "com.certification.sas.base"
+        versionCode = "10" 
+        version     = "0.0.0" >
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>BAS SAS Certification</name>
+
+    <description>
+        First try for mobile app
+    </description>
+
+    <author href="https://www.google.com" email="support@phonegap.com">
+        Neel And Dhaval
+    </author>
+
+    <!-- platform to build app for -->
+    <gap:platform name="android" />
+
+</widget>
