@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html data-ng-app="bspApp" id="ng-app">
+<head>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<meta content="utf-8" http-equiv="encoding">
+	<!-- include files -->
+	<script src="lib/angular/angular.min.js"></script>
+	<script src="lib/angular-timer.js"></script>
+	<script src="js/main.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<style type="text/css"></style>
+</head>
+<body>
+	<div class="bodyContainer">
+		<div class="titleBlock" data-ng-controller="timeController">
+			<span>SAS Exam Practice</span>
+			<timer class="timeCircle" countdown="examTimeSeconds" max-timeunit="'minute'" interval="1000"> {{minutes|twoDigit}}:{{seconds|twoDigit}}</timer>
+		</div>
+		<input type="button" value="Start" onclick="countdownAction('start')">
+		<input type="button" value="Resume" onclick="countdownAction('resume')">
+		<input type="button" value="Stop" onclick="countdownAction('stop')">
+	</div>
+</body>
+</html>
