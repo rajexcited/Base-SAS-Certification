@@ -39,3 +39,12 @@ function warningRedToggle(list,index,oldTime) {
 	var toggleTime=1;
 	list[index] = oldTime-toggleTime;
 }
+
+
+/*	home page	*/
+
+function close () {
+	alert(navigator.app);
+	alert(navigator.device);
+}
+

@@ -1,4 +1,8 @@
-* {box-sizing: border-box;}
+* {	
+	box-sizing: border-box;	
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+}
 
 html { 
 	height: 100%;
@@ -7,20 +11,36 @@ html {
 	-ms-text-size-adjust:100%;
 	text-size-adjust:100%;
 }
-body {height: 100%; margin: 0px;}
 
-.bodyContainer {
+body {
+	height: 100%; 
+	margin: 0px;
+	padding: 0px;
+}
+
+.mainContainer {
 	width: 100%;
 	height: 100%;
 	font:18px arial, helvetica;
 	padding: 8px;
-	
+	display: table;
+
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select:none;
+}
+
+.mainContainer .headerBlk {
+	display: table-row;
+}
+
+.mainContainer .bodyBlk {
+	text-align: center;
+	display: table-row;
+	height: 100%;
 }
 
 .timeCircle {
@@ -39,7 +59,7 @@ body {height: 100%; margin: 0px;}
 	float: right;
 }
 
-.titleBlock {
+.headerBlk .titleBlk {
 	height: 60px;
 	font-size: 21px;
 	font-weight: bold;
@@ -49,7 +69,12 @@ body {height: 100%; margin: 0px;}
 	line-height: 47px;
 }
 
-.exitBtn {
+.headerBlk .titleBlk p {
+	text-transform:uppercase;	
+	margin:0px;
+}
+
+.headerBlk .exitBtn {
 	float: left;
 	border: 2px solid #8fade2;
 	line-height: normal;
@@ -62,21 +87,17 @@ body {height: 100%; margin: 0px;}
 	cursor: context-menu;
 }
 
-.selectionBlock {
-	text-align: center;
-	margin: 30px auto 10px;
+.bodyBlk .optionsBlk {
+	display: table-cell;
+	vertical-align: middle;
 }
 
-.optionBtn {
+.optionsBlk .optionBtn {
 	padding: 10px;
 	border: 1px solid #9c9c9c;
 	border-radius: 70px;
 	margin: 8px auto;
 	background-color: #F2F2F2;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-.optionBtn a{
 	color: black;
 	text-decoration: initial;
 }
@@ -85,9 +106,6 @@ body {height: 100%; margin: 0px;}
 	border-width: 2px;
 	background-color: #DADADA;
 	cursor: pointer;
-}
-
-.optionBtn:hover a, .optionBtn:active a{
 	font-weight: bold;
 }
 
