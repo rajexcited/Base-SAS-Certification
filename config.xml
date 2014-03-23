@@ -17,6 +17,8 @@
         Neel And Dhaval
     </author>
 
+    <preference name="KeepRunning" value="false"/>
+    <icon src="images/icons/default.png" />
     <!-- platform to build app for -->
     <gap:platform name="android" />
 
