@@ -3,25 +3,35 @@
 <head>
 	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
 	<meta content="utf-8" http-equiv="encoding">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<base href="http://localhost:63342/Base-SAS-Certification/"></base>
+	<title> Base SAS Certification Practice </title>
+	
+	<!-- all lib -->
+	<script src="lib/angular-1.2.16/angular.js"></script>
+	<script src="lib/angular-1.2.16/angular-route.js"></script>
+	<!-- custom -->
 	<link rel="stylesheet" type="text/css" href="css/home.css">
 	<script src="js/common.js"></script>
+	<script src="js/routes.js"></script>
 </head>
-<body>
-	<div class="mainContainer">
-		<div class="headerBlk">
-			<div class="exitBtn" onclick="close(); return false;">Exit</div>
-			<div class="titleBlk"><p>Base SAS Certification</p></div>
+<body>	
+	<span id="ng-app" ng-app="base.sas.app">
+		<div class="mainContainer" ng-controller="baseCtrl">
+				<div class="headerBlk">			
+					<div class="titleBlk"><p>Base SAS Certification</p></div>
+				</div>
+				<div class="bodyBlk" > 
+<div class="optionsBlk">
+	<div class="optionBtn" ng-click="changeView($event,$attr)"><span>Base SAS Practice Exam</span></div>
+	<div class="optionBtn" ng-click="goToPage(this)"><span>QAS by Topics</span></div>
+	<div class="optionBtn"><span>QAS Randomly</span></div>
+	<div class="optionBtn"><span>Discussion Forum</span></div>
+	<div class="optionBtn"><span>Certification information <br/> (Material + Registration)</span></div>			
+</div>
+
+				</div>
 		</div>
-		<div class="bodyBlk">
-			<div class="optionsBlk">
-				<div class="optionBtn"><span>Base SAS Practice Exam</span></div>
-				<div class="optionBtn"><span>QAS by Topics</span></div>
-				<div class="optionBtn"><span>QAS Randomly</span></div>
-				<div class="optionBtn"><span>Discussion Forum</span></div>
-				<div class="optionBtn"><span>Post your Questions</span></div>
-				<div class="optionBtn"><span>Certification information (Material + Registration)</span></div>			
-			</div>
-		</div>
-	</div>
+	</span>
 </body>
 </html>

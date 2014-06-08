@@ -1,7 +1,24 @@
 var timerElementObj, notifyTimes = [5];
 
 // angular constructor
-(function () {
+(function (angular) {
+	angular.module('base.sas.app',['base.sas.route'])
+			.controller('baseCtrl', function($scope,$window,$location){
+				console.log($location.path());
+				console.log($location.absUrl());
+				$scope.goToPage = function (url) {
+					$window.location.href = url;
+				}
+				$scope.changeView = function (event,attr) {
+					console.log('changing changeView');
+					//$location.path('#'+url);
+				}
+			})
+			.controller('PageTopicsController', function($scope){
+				console.log('init PageTopicsController');
+			});
+
+	// with timer - later to be used
 	angular.module('bspApp',['timer'])
 			.controller('timeController',function($scope,$timeout,$log) {
 				$scope.$on('timer-tick',function (event,args) {
@@ -23,7 +40,7 @@ var timerElementObj, notifyTimes = [5];
 					return ("00"+num).slice(-2);
 				};
 			});
-})();
+})(angular);
 
 function countdownAction (actionTag) {
 	if(!timerElementObj) {

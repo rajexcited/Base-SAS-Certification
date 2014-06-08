@@ -1,3 +1,0 @@
-angular.min.js - v1.2.14
-
-angular-timer.min.js - v1.0.12
