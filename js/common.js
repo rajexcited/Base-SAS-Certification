@@ -5,7 +5,7 @@ var timerElementObj, notifyTimes = [5];
 	angular.module('base.sas.app',['base.sas.route'])
 			.controller('baseCtrl', function($scope,$window,$location){
 				console.log($location.path());
-				console.log($location.absUrl());
+				alert($location.absUrl());
 				$scope.goToPage = function (url) {
 					$window.location.href = url;
 				}
